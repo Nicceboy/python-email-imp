@@ -14,7 +14,7 @@ def template_test():
 
 @app.route('/template', methods=['GET'])
 def setTemplate():
-    # please get /qrcode?data=<qrcode_data>
+    # please get /template?name=<name>&qr_code=<qr_code>
     name = request.args.get('name', '')
     qr_code = request.args.get('qr_code', '')
     return  render_template('template.html', name=name, qr_string=qr_code)
