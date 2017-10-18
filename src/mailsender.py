@@ -55,7 +55,7 @@ class MailSender(object):
         self.msg['To'] = email.utils.formataddr((self.toName, self.toAddr))
         self.msg['From'] = email.utils.formataddr((self.fromName, self.fromAddr))
         self.msg['Subject'] = self.subject
-        self.msg['List-Unsubscribe'] = '<mailto:example@example.com>, <example@example.com>'
+        self.msg['List-Unsubscribe'] = '<mailto:example@example.com>, <example.com>'
         self.msg['List-Unsubscribe-Post'] = 'List-Unsubscribe=One-Click'
 
 
