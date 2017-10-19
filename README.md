@@ -7,22 +7,22 @@ There are multiple sources which can guide for successful configuration.
 
 Some important parts in configration:
 
-Make sure your Linux hostname is correct:
+**Make sure your Linux hostname is correct:**
 > nicce@mail:~$ hostname
-> deeplylost.tech´´´
+> deeplylost.tech
 
 /etc/hosts and /etc/hostname should contain proper information
 
-Be sure about virtuals in Postfix configuration, they are your email accounts.
+**Be sure about virtuals in Postfix configuration, they are your email accounts.**
 
 > nicce@mail:~$ sudo cat /etc/postfix/virtual
 > nicce@deeplylost.tech nicce
 > nicce@mail.deeplylost.tech nicce
 > niklas.saari@deeplylost.tech nicce
 
-Here is my Postfix configuration file:
+**Here is my Postfix configuration file:**
 
-´´´
+```
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
 
 
@@ -83,4 +83,4 @@ milter_default_action = accept
 milter_protocol = 2
 smtpd_milters = inet:localhost:12345
 non_smtpd_milters = inet:localhost:12345
-´´´
+```
